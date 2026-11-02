@@ -1,0 +1,496 @@
+/* Colour variables for the whole website.
+   Changing a colour here updates every rule that uses that variable. */
+:root {
+  --navy: #1b1b2f;
+  --blue: #3a86ff;
+  --purple: #8338ec;
+  --light-blue: #f0edff;
+  --border: #d6e0ea;
+  --text: #13233a;
+  --muted: #536477;
+  --surface: #ffffff;
+  --page: #f8fbff;
+}
+
+/* Makes width and height calculations easier by including padding and borders. */
+* {
+  box-sizing: border-box;
+}
+
+/* Global page settings: remove default margin, set the main font, and apply the page background. */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--page);
+}
+
+/* Images should shrink to fit their containers instead of overflowing. */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Default link colour used across the site. */
+a {
+  color: var(--blue);
+}
+
+/* Accessibility helper.
+   The link is hidden off-screen until keyboard users tab onto it. */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--navy);
+  color: white;
+  padding: 0.75rem 1rem;
+  z-index: 20;
+}
+
+/* When focused, the skip link becomes visible so users can jump straight to main content. */
+.skip-link:focus {
+  left: 0;
+}
+
+/* Header area that contains the logo and main navigation. */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Shared page width.
+   These three containers line up the header, page sections, and footer content. */
+.header-inner,
+.section,
+.footer-inner {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+/* Flexbox places the logo on the left and the navigation on the right. */
+.header-inner {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Controls the visible size of the logo image in the header. */
+.logo {
+  width: 150px;
+}
+
+/* Removes default bullet styling from navigation and footer lists. */
+.main-nav ul,
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation links sit in a row on desktop and can wrap on smaller screens. */
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Base style for each navigation link. */
+.main-nav a {
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 700;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid transparent;
+}
+
+/* Shows hover, keyboard focus, and the current page using the same blue underline. */
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a[aria-current="page"] {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+/* Home page hero.
+   The gradient keeps the text readable over the background image. */
+.hero {
+  background: linear-gradient(90deg, rgba(248, 251, 255, 0.96) 0%, rgba(248, 251, 255, 0.86) 48%, rgba(248, 251, 255, 0.08) 100%), url("assets/cyber-legends.svg") center / cover;
+}
+
+/* Gives the hero enough height and vertically centres the content. */
+.hero .section {
+  min-height: 430px;
+  display: grid;
+  align-items: center;
+}
+
+/* Keeps hero text from stretching too wide on large screens. */
+.hero-content {
+  max-width: 560px;
+}
+
+/* Small uppercase label used above main headings. */
+.eyebrow {
+  color: var(--purple);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+}
+
+/* Shared heading styling keeps the page hierarchy consistent. */
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+/* clamp() gives a responsive heading size with a minimum and maximum. */
+h1 {
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+/* Secondary heading size. */
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+/* Smaller heading size used inside cards and panels. */
+h3 {
+  font-size: 1.15rem;
+}
+
+/* Paragraph spacing: margin only at the bottom keeps vertical rhythm predictable. */
+p {
+  margin: 0 0 1rem;
+}
+
+/* Reusable button class for links and form buttons. */
+.button {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid var(--blue);
+}
+
+/* Secondary buttons are outlined/light so they feel less dominant. */
+.button.secondary {
+  background: white;
+  color: var(--blue);
+}
+
+/* Every main content section uses the same vertical spacing. */
+.section {
+  padding: 3rem 0;
+}
+
+/* Limits introduction text so it stays readable. */
+.section-intro {
+  max-width: 720px;
+  margin-bottom: 1.5rem;
+}
+
+/* Reusable grid helper. Extra classes decide how many columns are used. */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Three-column layout, used for feature blocks. */
+.grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Four-column layout, used for menu and popular item cards. */
+.grid.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Two-column layout, used for image/text and contact panels. */
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Shared panel/card styling for repeated content blocks. */
+.card,
+.info-panel,
+.form-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Adds internal spacing inside cards and panels. */
+.card-content,
+.info-panel,
+.form-panel {
+  padding: 1rem;
+}
+
+/* Card images share a fixed height so all menu cards line up neatly. */
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+/* Menu prices need to stand out from descriptions. */
+.price {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+/* Feature blocks highlight short benefits without needing images. */
+.feature {
+  background: var(--light-blue);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+/* Strong text inside feature cards uses the brand navy. */
+.feature strong {
+  color: var(--navy);
+}
+
+/* Page title banner used on Menu and Contact pages. */
+.page-title {
+  text-align: center;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Slightly tighter spacing inside page title banners. */
+.page-title .section {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+/* Static category tabs for Week 8.
+   These look like controls now; JavaScript can make them interactive in Week 10. */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+/* Base visual style for each category tab. */
+.tab {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  color: var(--navy);
+  padding: 0.6rem 0.9rem;
+  font-weight: 700;
+}
+
+/* Active tab shows the selected category. */
+.tab.active {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+
+/* Contact details use a definition list because each label has a matching value. */
+.details-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+/* Each detail row has a label column and a value column on desktop. */
+.details-list div {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1rem;
+}
+
+/* Definition terms are the labels, such as Visit us and Call us. */
+.details-list dt {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* Definition descriptions hold the actual contact information. */
+.details-list dd {
+  margin: 0;
+}
+
+/* The contact form uses a grid so each form row has consistent spacing. */
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Places name and email side by side on larger screens. */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Labels are displayed above their inputs for clarity and accessibility. */
+label {
+  display: block;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+
+/* Shared input styling for text fields and the message box. */
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem;
+  font: inherit;
+  background: white;
+}
+
+/* The message box starts taller than a normal input and can be resized vertically. */
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Notice panels draw attention to useful information without being full pages. */
+.notice {
+  background: var(--light-blue);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Gives location and studio images a simple framed edge. */
+.map-image {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* Footer uses a dark background to close the page visually. */
+.site-footer {
+  background: var(--navy);
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Four footer columns: brand, quick links, opening hours, and location. */
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Footer headings and links need to be white on the dark background. */
+.site-footer h2,
+.site-footer h3,
+.site-footer a {
+  color: white;
+}
+
+/* Footer body text uses a softer blue-white so it is readable but less loud. */
+.site-footer p,
+.site-footer li {
+  color: #dbe8f6;
+}
+
+/* Text version of the logo for the footer.
+   This avoids the original logo image becoming a white block on the dark footer. */
+.footer-brand {
+  display: grid;
+  gap: 0.1rem;
+  width: max-content;
+  margin-bottom: 0.75rem;
+  color: white;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Circular 19 badge used inside the footer brand mark. */
+.footer-brand span {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: white;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* Main PixelForge wordmark in the footer. */
+.footer-brand strong {
+  font-size: 1.35rem;
+  letter-spacing: 0.12em;
+}
+
+/* Small tagline below the footer wordmark. */
+.footer-brand em {
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+/* Final copyright strip at the bottom of every page. */
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 1rem;
+  color: #dbe8f6;
+  font-size: 0.9rem;
+}
+
+/* Responsive rules for tablets and phones. */
+@media (max-width: 860px) {
+  /* Stack the logo and navigation so the header does not feel cramped. */
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  /* On small screens, use a stronger overlay so hero text stays readable. */
+  .hero {
+    background: linear-gradient(rgba(248, 251, 255, 0.94), rgba(248, 251, 255, 0.94)), url("assets/cyber-legends.svg") center / cover;
+  }
+
+  /* All multi-column layouts become one column on small screens. */
+  .grid.three,
+  .grid.four,
+  .grid.two,
+  .footer-inner,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Notice panels stack text and buttons vertically on mobile. */
+  .notice {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  /* Contact detail labels stack above their values on small screens. */
+  .details-list div {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+}

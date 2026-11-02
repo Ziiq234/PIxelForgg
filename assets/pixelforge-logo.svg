@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" role="img" aria-labelledby="title">
+  <title id="title">PixelForge</title>
+  <rect x="4" y="10" width="68" height="68" rx="8" fill="#1b1b2f"/>
+  <path d="M22 28h12v12H22zm14 0h12v12H36zm14 0h12v12H50zM22 42h12v12H22zm28 0h12v12H50zM22 56h12v12H22zm14 0h12v12H36zm14 0h12v12H50z" fill="#3a86ff"/>
+  <text x="88" y="60" fill="#1b1b2f" font-family="Arial, sans-serif" font-size="42" font-weight="700">PixelForge</text>
+</svg>

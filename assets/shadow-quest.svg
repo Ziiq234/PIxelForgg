@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title">
+  <title id="title">Shadow Quest game artwork</title>
+  <defs><linearGradient id="night" x2="0" y2="1"><stop stop-color="#13172a"/><stop offset=".62" stop-color="#254445"/><stop offset="1" stop-color="#7a9360"/></linearGradient><radialGradient id="moon"><stop stop-color="#eeffd0"/><stop offset="1" stop-color="#9bc983"/></radialGradient></defs>
+  <rect width="800" height="520" fill="url(#night)"/><circle cx="620" cy="120" r="76" fill="url(#moon)" opacity=".9"/><path d="M0 340 90 230l45 86 91-162 83 152 77-120 77 161 103-192 77 155 79-111 98 144v177H0z" fill="#172a2c"/><path d="M0 402 128 333l89 49 91-65 99 84 127-74 103 68 163-89v194H0z" fill="#101b21"/><path d="M377 402c-4-67 13-118 50-157 38 39 56 90 51 157z" fill="#080f17"/><path d="m428 261 0-58 13-36 13 36v58" fill="#d5ffb3"/><path d="M0 442h800" stroke="#9dc681" stroke-width="3" opacity=".5"/><text x="42" y="468" fill="#efffda" font-family="Arial,sans-serif" font-size="38" font-weight="700" letter-spacing="3">SHADOW QUEST</text>
+</svg>

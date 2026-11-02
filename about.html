@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- About page for the Week 8 static website. -->
+<html lang="en">
+<head>
+  <!-- Metadata tells the browser how to read and scale the page. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about PixelForge, a fictional video game company creating exciting gaming experiences.">
+  <title>PixelForge | About</title>
+  <!-- Shared stylesheet keeps this page visually consistent with the others. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Accessibility link for keyboard and screen reader users. -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Shared site header with logo and navigation. -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" aria-label="PixelForge home">
+        <img class="logo" src="assets/pixelforge-logo.svg" alt="PixelForge logo">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <!-- aria-current shows that this is the page currently open. -->
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- The main element holds content that is unique to this page. -->
+  <main id="main">
+    <!-- Intro section: two-column layout with text on one side and an image on the other. -->
+    <section class="section">
+      <div class="grid two">
+        <div>
+          <p class="eyebrow">About us</p>
+          <h1>PixelForge</h1>
+          <p>PixelForge is a fictional video game company based in Chichester, UK. We bring together a passionate team of designers, writers and developers to create exciting gaming experiences.</p>
+          <a class="button" href="contact.html">Contact our team</a>
+        </div>
+        <!-- The image supports the page story and has descriptive alt text. -->
+        <img class="map-image" src="assets/studio.svg" alt="Game development workstations at PixelForge Studios">
+      </div>
+    </section>
+
+    <!-- Values section: short feature cards are easy to scan. -->
+    <section class="section" aria-labelledby="values-heading">
+      <div class="section-intro">
+        <p class="eyebrow">Our values</p>
+        <h2 id="values-heading">What matters to us</h2>
+      </div>
+      <!-- grid four displays four value cards across the page on desktop. -->
+      <div class="grid four">
+        <article class="feature">
+          <h3>Innovation</h3>
+          <p>We explore new ideas and technologies to make play feel fresh.</p>
+        </article>
+        <article class="feature">
+          <h3>Creativity</h3>
+          <p>We build distinctive worlds, memorable characters and stories worth sharing.</p>
+        </article>
+        <article class="feature">
+          <h3>Quality</h3>
+          <p>We polish every detail to create reliable, rewarding experiences.</p>
+        </article>
+        <article class="feature">
+          <h3>Community</h3>
+          <p>We listen to players and make space for people to connect through games.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Story section: combines studio artwork with the company's mission. -->
+    <section class="section" aria-labelledby="story-heading">
+      <div class="grid two">
+        <img class="map-image" src="assets/cyber-legends.svg" alt="Neon mountain landscape from a PixelForge game world">
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2 id="story-heading">Exciting experiences, made together</h2>
+          <p>Our mission is to create exciting gaming experiences that invite players to explore, compete and connect.</p>
+          <p>From the first sketch to the final challenge, we put imagination and care into every world we create.</p>
+          <!-- Nested grid creates two smaller feature blocks inside the story section. -->
+          <div class="grid two">
+            <article class="feature">
+              <h3>Our mission</h3>
+              <p>Create exciting gaming experiences for players everywhere.</p>
+            </article>
+            <article class="feature">
+              <h3>Our approach</h3>
+              <p>Make ambitious ideas playable, polished and memorable.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared footer appears at the end of each page. -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <!-- Text-based footer branding keeps contrast strong against the dark background. -->
+        <div class="footer-brand" aria-label="PixelForge">
+          <span>PF</span>
+          <strong>PIXELFORGE</strong>
+          <em>Play beyond</em>
+        </div>
+        <p>Original games and new worlds, made for every kind of player.</p>
+      </div>
+      <div>
+        <!-- Repeated links help users navigate after reading the page. -->
+        <h2>Quick links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Player support</h2>
+        <p>Monday - Friday<br>9:00 AM - 5:00 PM</p>
+        <p>Saturday - Sunday<br>Online support</p>
+      </div>
+      <div>
+        <!-- Contact summary gives key information without needing another click. -->
+        <h2>Find us</h2>
+        <p>PixelForge Studios<br>Chichester, UK</p>
+        <p>01234 567890<br>support@pixelforge.co.uk</p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 PixelForge. Fictional gaming company.</p>
+  </footer>
+</body>
+</html>

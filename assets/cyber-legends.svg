@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title">
+  <title id="title">Cyber Legends game artwork</title>
+  <defs><linearGradient id="sky" x2="1" y2="1"><stop stop-color="#101328"/><stop offset=".58" stop-color="#253d70"/><stop offset="1" stop-color="#8338ec"/></linearGradient><linearGradient id="blade" x2="0" y2="1"><stop stop-color="#b9efff"/><stop offset="1" stop-color="#3a86ff"/></linearGradient></defs>
+  <rect width="800" height="520" fill="url(#sky)"/><circle cx="590" cy="150" r="92" fill="#3a86ff" opacity=".23"/><path d="M0 370 140 270l75 72 115-158 92 141 117-104 90 91 96-121 75 84v245H0z" fill="#11162c"/><path d="M0 430 170 345l105 59 120-116 111 111 134-76 160 85v112H0z" fill="#080c1d"/><path d="M385 170 435 160 414 286 481 294 368 420 385 310 322 304z" fill="url(#blade)"/><path d="M77 130h102M98 154h64M600 315h121M632 339h75" stroke="#65dbff" stroke-width="4" opacity=".65"/><text x="42" y="468" fill="#fff" font-family="Arial,sans-serif" font-size="38" font-weight="700" letter-spacing="3">CYBER LEGENDS</text>
+</svg>

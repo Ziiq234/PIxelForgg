@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- The html lang attribute tells browsers and screen readers the page language. -->
+<html lang="en">
+<head>
+  <!-- UTF-8 supports special characters such as the pound sign and accented words. -->
+  <meta charset="UTF-8">
+  <!-- The viewport tag makes the layout scale correctly on phones and tablets. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover original adventures, imaginative worlds and digital games at PixelForge.">
+  <title>PixelForge | Home</title>
+  <!-- All pages share the same stylesheet so the website looks consistent. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Skip link helps keyboard users move past the repeated navigation. -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Site header: repeated on every page for consistent navigation. -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Logo also works as a home page link. -->
+      <a href="index.html" aria-label="PixelForge home">
+        <img class="logo" src="assets/pixelforge-logo.svg" alt="PixelForge logo">
+      </a>
+      <!-- aria-label names the navigation region for assistive technology. -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <!-- aria-current marks the page the visitor is currently viewing. -->
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main contains the unique content for this page. -->
+  <main id="main">
+    <!-- Hero section: first impression with the main message and call to action. -->
+    <section class="hero">
+      <div class="section">
+        <div class="hero-content">
+          <p class="eyebrow">Welcome to</p>
+          <h1>PixelForge</h1>
+          <p><strong>Play beyond the expected.</strong></p>
+          <p>Discover original adventures, imaginative worlds and digital games from an independent gaming studio built for curious players.</p>
+          <a class="button" href="games.html">Browse Games</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature section: three reasons to explore PixelForge. -->
+    <section class="section" aria-labelledby="features-heading">
+      <div class="section-intro">
+        <p class="eyebrow">Why PixelForge</p>
+        <!-- This id connects the heading to aria-labelledby on the section. -->
+        <h2 id="features-heading">Built for your next great game</h2>
+      </div>
+      <!-- grid three creates a three-column layout on desktop. -->
+      <div class="grid three">
+        <!-- article is used because each feature is a self-contained item. -->
+        <article class="feature">
+          <h3>Original Worlds</h3>
+          <p>Step into distinctive settings shaped by bold ideas and imaginative design.</p>
+        </article>
+        <article class="feature">
+          <h3>Play Your Way</h3>
+          <p>Find story-led adventures, competitive challenges and fast arcade action.</p>
+        </article>
+        <article class="feature">
+          <h3>Made for Players</h3>
+          <p>Discover welcoming experiences and a community that celebrates every kind of player.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Featured games preview: a sample of the full catalogue. -->
+    <section class="section" aria-labelledby="popular-heading">
+      <div class="section-intro">
+        <p class="eyebrow">Featured games</p>
+        <h2 id="popular-heading">Choose your next world</h2>
+      </div>
+      <!-- grid four creates four cards in one row on large screens. -->
+      <div class="grid four">
+        <article class="card">
+          <!-- alt text describes the image for people who cannot see it. -->
+          <img src="assets/cyber-legends.svg" alt="Neon-lit mountains and an energy blade from Cyber Legends">
+          <div class="card-content">
+            <h3>Cyber Legends</h3>
+            <p class="price">£19.99</p>
+            <p>Join rival crews in a neon frontier where every choice shapes the city grid.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/dragon-realms.svg" alt="A dragon soaring beneath a glowing moon in Dragon Realms">
+          <div class="card-content">
+            <h3>Dragon Realms</h3>
+            <p class="price">£24.99</p>
+            <p>Explore a fantasy kingdom and uncover the source of an ancient threat.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/galaxy-racer.svg" alt="A futuristic spacecraft racing across a colourful galaxy">
+          <div class="card-content">
+            <h3>Galaxy Racer</h3>
+            <p class="price">£14.99</p>
+            <p>Race through the stars in a high-speed interstellar championship.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/shadow-quest.svg" alt="A lone adventurer beneath a moonlit forest in Shadow Quest">
+          <div class="card-content">
+            <h3>Shadow Quest</h3>
+            <p class="price">£29.99</p>
+            <p>Uncover a forgotten kingdom through puzzles and stealthy exploration.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Player support information">
+      <div class="notice">
+        <div>
+          <h2>Ready to find your next favourite?</h2>
+          <p>Browse the complete collection or get in touch with our player support team.</p>
+        </div>
+        <a class="button secondary" href="contact.html">Contact us</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: repeated contact and navigation information at the bottom of each page. -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <!-- Text-based footer brand avoids image contrast issues on the dark background. -->
+        <div class="footer-brand" aria-label="PixelForge">
+          <span>PF</span>
+          <strong>PIXELFORGE</strong>
+          <em>Play beyond</em>
+        </div>
+        <p>Original games and new worlds, made for every kind of player.</p>
+      </div>
+      <div>
+        <!-- Quick links repeat the main navigation for users who reach the page bottom. -->
+        <h2>Quick links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Player support</h2>
+        <p>Monday - Friday<br>9:00 AM - 5:00 PM</p>
+        <p>Saturday - Sunday<br>Online support</p>
+      </div>
+      <div>
+        <h2>Find us</h2>
+        <p>PixelForge Studios<br>Chichester, UK</p>
+        <p>01234 567890<br>support@pixelforge.co.uk</p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 PixelForge. Fictional gaming company.</p>
+  </footer>
+</body>
+</html>
