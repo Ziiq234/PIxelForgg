@@ -1,6 +1,5 @@
 # PixelForge
 
-A responsive, coursework-ready static website for PixelForge, a fictional video game company based in Chichester, UK.
 
 ## Pages
 
