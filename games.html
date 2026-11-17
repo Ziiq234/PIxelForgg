@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover story-driven adventures and high-speed worlds in the PixelForge games catalogue.">
+  <meta name="description"
+    content="Discover story-driven adventures and high-speed worlds in the PixelForge games catalogue.">
   <title>PixelForge | Games</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
@@ -40,14 +44,15 @@
         <p>Four original experiences, ready for your next play session.</p>
       </div>
       <div class="tabs" aria-label="Game categories">
-        <span class="tab active">All games</span>
-        <span class="tab">Action</span>
-        <span class="tab">Adventure</span>
-        <span class="tab">Racing</span>
-        <span class="tab">Fantasy</span>
+        <button class="tab active" type="button" data-filter="all" aria-pressed="true">All games</button>
+        <button class="tab" type="button" data-filter="action" aria-pressed="false">Action</button>
+        <button class="tab" type="button" data-filter="adventure" aria-pressed="false">Adventure</button>
+        <button class="tab" type="button" data-filter="racing" aria-pressed="false">Racing</button>
+        <button class="tab" type="button" data-filter="fantasy" aria-pressed="false">Fantasy</button>
       </div>
+      <p id="filter-feedback" aria-live="polite">Showing 4 games.</p>
       <div class="grid four">
-        <article class="card">
+        <article class="card" data-category="action">
           <img src="assets/cyber-legends.svg" alt="Neon-lit mountains and an energy blade from Cyber Legends">
           <div class="card-content">
             <h3>Cyber Legends</h3>
@@ -55,7 +60,7 @@
             <p>Rise through a neon frontier where rival crews battle for control of the city grid.</p>
           </div>
         </article>
-        <article class="card">
+        <article class="card" data-category="fantasy">
           <img src="assets/dragon-realms.svg" alt="A dragon soaring beneath a glowing moon in Dragon Realms">
           <div class="card-content">
             <h3>Dragon Realms</h3>
@@ -63,7 +68,7 @@
             <p>Explore a vast fantasy kingdom, master ancient magic and face a growing dragon threat.</p>
           </div>
         </article>
-        <article class="card">
+        <article class="card" data-category="racing">
           <img src="assets/galaxy-racer.svg" alt="A futuristic spacecraft racing across a colourful galaxy">
           <div class="card-content">
             <h3>Galaxy Racer</h3>
@@ -71,7 +76,7 @@
             <p>Take the controls in a fast-paced interstellar championship across distant planets.</p>
           </div>
         </article>
-        <article class="card">
+        <article class="card" data-category="adventure">
           <img src="assets/shadow-quest.svg" alt="A lone adventurer beneath a moonlit forest in Shadow Quest">
           <div class="card-content">
             <h3>Shadow Quest</h3>
@@ -126,4 +131,5 @@
     <p class="copyright">© 2026 PixelForge. Fictional gaming company.</p>
   </footer>
 </body>
+
 </html>
