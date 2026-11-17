@@ -5,7 +5,6 @@ const filterButtons = document.querySelectorAll(".tab");
 const menuItems = document.querySelectorAll(".card");
 const filterFeedback = document.querySelector("#filter-feedback");
 
-// DECIDE which items match and UPDATE their hidden property.
 function filterMenu(category) {
   let visibleCount = 0;
 
@@ -20,12 +19,11 @@ function filterMenu(category) {
     }
   });
 
-  // UPDATE the live feedback so the result is clear without counting cards.
+ 
   filterFeedback.textContent =
     `Showing ${visibleCount} game${visibleCount === 1 ? "" : "s"}.`;
 }
 
-// Keep the active style and accessibility state same.
 function updateActiveButton(selectedButton) {
   filterButtons.forEach((button) => {
     const isSelected = button === selectedButton;
